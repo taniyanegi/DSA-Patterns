@@ -1,0 +1,71 @@
+// two pointer approach - Dutch National Flag Algorithm
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+            int n=nums.size();
+            int low;
+            int mid;
+            int high;
+            low=mid=0;
+            high=n-1;
+
+            while(mid<=high){
+                if(nums[mid]==0)
+                {
+                    swap(nums[low],nums[mid]);
+                    low++;
+                    mid++;
+                }
+                else if(nums[mid]==1){
+                    mid++;
+                }
+                else{
+                    swap(nums[mid],nums[high]);
+                    high--;
+                }
+            }
+
+    }
+};
+
+
+
+// counting approach - count the number of 0s,1s and 2s and then fill the array accordingly
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int n=nums.size();
+        int cnt0=0;
+   int cnt1=0;
+   int cnt2=0;
+   for(int i=0;i<n;i++) {
+      if(nums[i]==0)
+      cnt0++;
+      else if(nums[i]==1)
+      cnt1++;
+      else
+      cnt2++;
+   }
+   for(int i=0;i<cnt0;i++){
+      nums[i]=0;
+   }
+    for(int i=cnt0;i<cnt0+cnt1;i++){
+      nums[i]=1;
+   }
+    for(int i=cnt0+cnt1;i<n;i++){
+      nums[i]=2;
+   }
+        
+    }
+};
+
+// brute force approach - sort the array using any sorting algorithm
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+    }
+};
