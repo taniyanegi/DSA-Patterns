@@ -53,6 +53,23 @@ Examples:
 
 ---
 
+### In-Place Manipulation
+
+Modify the array without using extra space. Usually one pointer tracks the position where the next valid element should be placed, while another pointer scans the array.
+
+Examples:
+
+* Move Zeroes
+* Remove Duplicates from Sorted Array
+* Remove Duplicates from Sorted Array II
+* Sort Colors
+
+Benefits:
+
+* O(1) extra space
+* Efficient array modification
+* Frequently asked in interviews
+
 ## Time and Space Complexity
 
 * Time Complexity: O(n)
