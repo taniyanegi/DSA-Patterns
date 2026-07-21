@@ -1,4 +1,4 @@
-// provide whole code  for printing levels of a binary tree in C++14
+//whole code  for printing levels of a binary tree
 #include <iostream>
 #include <vector>
 #include <queue>
