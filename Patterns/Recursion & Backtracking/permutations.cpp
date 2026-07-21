@@ -1,5 +1,7 @@
-class Solution {
-    private:
+   #include <iostream>
+   #include <bits/stdc++.h>
+   using namespace std;
+
       void getPermutations(vector<int>& nums,int idx,vector<vector<int>> &ans){
             if(idx==nums.size()){
                 ans.push_back(nums);
@@ -11,10 +13,24 @@ class Solution {
                 swap(nums[idx],nums[i]);
             }
       }
-public:
+
+
     vector<vector<int>> permute(vector<int>& nums) {
            vector<vector<int>> ans;
            getPermutations(nums,0,ans);
            return ans;
     }
-};
+
+    int main(){
+        vector<int> nums={1,2,3};
+        vector<vector<int>> ans=permute(nums);
+
+        for(auto it:ans){
+            for(auto i:it){
+                cout<<i<<" ";
+            }
+            cout<<endl;
+        }
+
+        return 0;
+    }

@@ -1,5 +1,7 @@
-class Solution {
-    public:
+   #include <iostream>
+   #include <bits/stdc++.h>
+   using namespace std;
+
   bool  isPal(string part){
           int left=0;
           int right=part.size()-1;
@@ -31,7 +33,7 @@ class Solution {
               }
 }
 
-public:
+
     vector<vector<string>> partition(string s) {
         vector<string> partitions;
         vector<vector<string>> ans;
@@ -40,4 +42,17 @@ public:
 
         return ans;
     }
-};
+
+    int main(){
+        string s="aab";
+        vector<vector<string>> ans=partition(s);
+
+        for(auto it:ans){
+            for(auto i:it){
+                cout<<i<<" ";
+            }
+            cout<<endl;
+        }
+
+        return 0;
+    }

@@ -1,5 +1,6 @@
-class Solution {
-    public:
+    #include <iostream>
+   #include <bits/stdc++.h>
+   using namespace std;
      // TC:O(2^n*n)
     void printSubsets(vector<int>& nums,vector<vector<int>> &result,vector<int> &ans,int i){
           if(i==nums.size()){
@@ -16,7 +17,7 @@ class Solution {
            printSubsets(nums,result,ans,i+1);
         
     }
-public:
+
     vector<vector<int>> subsets(vector<int>& nums) {
           vector<vector<int>> result;
           vector<int> ans;
@@ -26,4 +27,17 @@ public:
 
         return result; 
     }
-};
+
+    int main(){
+        vector<int> nums={1,2,3};
+        vector<vector<int>> ans=subsets(nums);
+
+        for(auto it:ans){
+            for(auto i:it){
+                cout<<i<<" ";
+            }
+            cout<<endl;
+        }
+
+        return 0;
+    }

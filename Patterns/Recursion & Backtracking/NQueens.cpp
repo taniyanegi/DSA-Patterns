@@ -1,5 +1,8 @@
-class Solution {
-    private:
+   #include <iostream>
+   #include <bits/stdc++.h>
+   using namespace std;
+
+
        bool isSafe(vector<string>& board,int row,int col,int n){
                //horizontal
                for(int j=0;j<n;j++){
@@ -30,6 +33,8 @@ class Solution {
                }
                return true;
        }
+
+
     void nQueens(vector<string>& board,int row,int n,vector<vector<string>>& ans){
           if(row==n){
             ans.push_back(board);
@@ -44,7 +49,9 @@ class Solution {
                  }
           }
     }
-public:
+
+
+
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>> ans;
         vector<string> board(n,string(n,'.'));
@@ -52,4 +59,18 @@ public:
 
         return ans;
     }
-};
+
+
+    int main(){
+        int n=4;
+        vector<vector<string>> ans=solveNQueens(n);
+
+        for(auto it:ans){
+            for(auto i:it){
+                cout<<i<<endl;
+            }
+            cout<<endl;
+        }
+
+        return 0;
+    }
