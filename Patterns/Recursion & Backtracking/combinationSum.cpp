@@ -1,6 +1,9 @@
-class Solution {
-        set<vector<int>> st;
-    private:
+  #include<iostream>
+  #include<bits/stdc++.h>
+  using namespace std;
+
+    set<vector<int>> st;
+    
     void getAllCombinations(vector<int>& candidates,int idx,int target,vector<vector<int>> &ans, vector<int>& combin){
         int n=candidates.size();
                if(idx==n || target<0){
@@ -26,7 +29,7 @@ class Solution {
                //exclusion
                getAllCombinations(candidates,idx+1,target,ans,combin);
     }
-public:
+
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
        vector<vector<int>> ans;
        vector<int> combin;
@@ -35,4 +38,19 @@ public:
 
        return ans;   
     }
-};
+
+    int main(){
+        vector<int> candidates={2,3,6,7};
+        int target=7;
+
+        vector<vector<int>> ans=combinationSum(candidates,target);
+
+        for(auto it:ans){
+            for(auto i:it){
+                cout<<i<<" ";
+            }
+            cout<<endl;
+        }
+
+        return 0;
+    }

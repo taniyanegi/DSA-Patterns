@@ -1,5 +1,7 @@
-class Solution {
-    public:
+   #include <iostream>
+   #include <bits/stdc++.h>
+   using namespace std;
+
     void getAllSubsets(vector<int>& nums,vector<int>& ans,int i,vector<vector<int>> &allSubsets){
            if(i==nums.size()){
              allSubsets.push_back(ans);
@@ -22,7 +24,7 @@ class Solution {
               //exclude
               getAllSubsets(nums,ans,idx,allSubsets);
     }
-public:
+
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
            sort(nums.begin(),nums.end());
            vector<int> ans;
@@ -32,4 +34,17 @@ public:
 
            return allSubsets;
     }
-};
+
+    int main(){
+        vector<int> nums={1,2,2};
+        vector<vector<int>> ans=subsetsWithDup(nums);
+
+        for(auto it:ans){
+            for(auto i:it){
+                cout<<i<<" ";
+            }
+            cout<<endl;
+        }
+
+        return 0;
+    }
