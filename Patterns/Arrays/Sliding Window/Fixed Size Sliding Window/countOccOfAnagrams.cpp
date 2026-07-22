@@ -1,5 +1,8 @@
-class Solution {
-  public:
+    #include<iostream>
+    #include<bits/stdc++.h>
+
+    using namespace std;
+
     int search(string &pat, string &txt) {
         
         unordered_map<char,int> mpp;
@@ -52,4 +55,12 @@ class Solution {
         
         return ans;
     }
-};
+
+    int main() {
+        string txt = "forxxorfxdofr";
+        string pat = "for";
+        
+        cout << search(pat, txt) << endl;
+        
+        return 0;
+    }

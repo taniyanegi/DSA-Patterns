@@ -1,5 +1,7 @@
-class Solution {
-public:
+  #include<iostream>
+  #include<bits/stdc++.h>
+  using namespace std;
+
     int maxSatisfied(vector<int>& customers, vector<int>& grumpy, int minutes) {
             int n=customers.size();
             int unsatisfied_cust=0;
@@ -35,4 +37,13 @@ public:
 
             return max_unsatisfied_cust;
     }
-};
+
+    int main(){
+         // example usage
+         vector<int> customers={1,0,1,2,1,1,7,5};
+         vector<int> grumpy={0,1,0,1,0,1,0,1};
+         int minutes=3; 
+
+       int  maxSatisfiedCustomers= maxSatisfied(customers,grumpy,minutes);
+       cout<<"Maximum satisfied customers are "<<maxSatisfiedCustomers<<endl;
+    } 

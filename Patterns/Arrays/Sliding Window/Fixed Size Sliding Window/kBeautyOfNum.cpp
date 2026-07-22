@@ -1,6 +1,9 @@
 //more optimal
-class Solution {
-public:
+ #include<iostream>
+ #include<bits/stdc++.h>
+
+ using namespace std;
+
     int divisorSubstrings(int num, int k) {
            int count=0;
              string s=to_string(num);
@@ -12,31 +15,39 @@ public:
            } 
            return count;
     }
-};
-//optimal
-class Solution {
-public:
-    int divisorSubstrings(int num, int k) {
-           string s=to_string(num);
-           int beauty=0;
-               int n=s.size();
-               int i=0;
-               int j=0;
 
-           while(j<n){
-              if(j-i+1<k){
-                 j++;
-              }
-              else if(j-i+1==k){
-                 string check=s.substr(i,k);
-                 int a=stoi(check);
-                if(a!=0 && num%a==0){
-                        beauty++;
-                    }
-                    i++;
-                    j++;
-                   }
-                }
-        return beauty;
-    }
-};
+//optimal
+
+
+    // int divisorSubstrings(int num, int k) {
+    //        string s=to_string(num);
+    //        int beauty=0;
+    //            int n=s.size();
+    //            int i=0;
+    //            int j=0;
+
+    //        while(j<n){
+    //           if(j-i+1<k){
+    //              j++;
+    //           }
+    //           else if(j-i+1==k){
+    //              string check=s.substr(i,k);
+    //              int a=stoi(check);
+    //             if(a!=0 && num%a==0){
+    //                     beauty++;
+    //                 }
+    //                 i++;
+    //                 j++;
+    //                }
+    //             }
+    //     return beauty;
+    // }
+
+int main(){
+      
+    int num=120;
+    int k=2;
+
+    int beautyOfNum=divisorSubstrings(num,k);
+    cout<<"Beauty of number is "<<beautyOfNum<<endl;
+}

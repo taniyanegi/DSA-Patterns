@@ -1,5 +1,7 @@
-class Solution {
-  public:
+   #include<iostream>
+   #include<bits/stdc++.h>
+   using namespace std;
+
     int maxSubarraySum(vector<int>& arr, int k) {
         // code here
           int n=arr.size();
@@ -23,4 +25,11 @@ class Solution {
             }
             return maxi;
     }
-};
+
+    int main(){
+             vector<int> nums={1,12,-5,-6,50,3};
+        int k=4;
+
+        int maxSum=maxSubarraySum(nums,k);
+        cout<<"Maximum sum of subarray is "<<maxSum<<endl;
+    }

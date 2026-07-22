@@ -1,6 +1,9 @@
+  #include<iostream>
+  #include<bits/stdc++.h>
+    using namespace std;
+
 // optimal
-class Solution {
-public:
+
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
              int n=nums.size();
               vector<int> ans;
@@ -26,24 +29,34 @@ public:
               }
              return ans;           
     }
-};
+
 
 
 // brute-TLE
-class Solution {
-public:
-    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-             int n=nums.size();
-              vector<int> ans;
-             for(int i=0;i<=n-k;i++){
-                int maxi=nums[i];
-                for(int j=i;j<i+k;j++){
-                         if(nums[j]>maxi){
-                            maxi=nums[j];
-                         }
-                }
-                   ans.push_back(maxi);
-             } 
-             return ans;           
+
+    // vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+    //          int n=nums.size();
+    //           vector<int> ans;
+    //          for(int i=0;i<=n-k;i++){
+    //             int maxi=nums[i];
+    //             for(int j=i;j<i+k;j++){
+    //                      if(nums[j]>maxi){
+    //                         maxi=nums[j];
+    //                      }
+    //             }
+    //                ans.push_back(maxi);
+    //          } 
+    //          return ans;           
+    // }
+
+    int main(){
+          vector<int> nums={8,9,3,4,5,2,3};
+          int k=3;
+
+          vector<int> ans=maxSlidingWindow(nums,k);
+
+          for(int i=0;i<ans.size();i++){
+                 cout<<ans[i]<<" ";
+          }
+        return 0;
     }
-};

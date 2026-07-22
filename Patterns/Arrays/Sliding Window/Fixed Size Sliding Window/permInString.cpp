@@ -1,5 +1,7 @@
-class Solution {
-public:
+   #include<iostream>
+   #include<bits/stdc++.h>
+    using namespace std;
+
     bool checkInclusion(string s1, string s2) {
          unordered_map<char,int> mpp;
         // Frequency of s1
@@ -46,4 +48,16 @@ public:
         }
         return false;
     }
-};
+
+    int main(){
+        string s1="ab";
+        string s2="eidbaooo";
+
+        bool isPermutationPresent=checkInclusion(s1,s2);
+        if(isPermutationPresent){
+            cout<<"Permutation of s1 is present in s2"<<endl;
+        }
+        else{
+            cout<<"Permutation of s1 is not present in s2"<<endl;
+        }
+    }

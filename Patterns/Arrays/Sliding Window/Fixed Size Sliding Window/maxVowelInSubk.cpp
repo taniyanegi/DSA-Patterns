@@ -1,12 +1,14 @@
-class Solution {
-    private:
+   #include<iostream>
+   #include<bits/stdc++.h>
+    using namespace std;
+
     bool isVowel(char ch){
               if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
                 return true;
               }
               return false;
     }
-public:
+
     int maxVowels(string s, int k) {
             int n=s.size();
              int maxi=0;
@@ -31,4 +33,11 @@ public:
              }
              return maxi;
     }
-};
+
+    int main(){
+        string s="abciiidef";
+        int k=3;
+
+        int maxVowel=maxVowels(s,k);
+        cout<<"Maximum vowels in substring of size k is "<<maxVowel<<endl;
+    }
