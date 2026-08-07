@@ -59,8 +59,7 @@ int main(){
      
     Node* root=buildTree(preorder);
     
-     // example of finding LCA of nodes with values 4 and 3
-    // use above preorder to build the tree and then find LCA of nodes with values 4 and 3
+     
       Node *ans=LowestCommonAncestor(root,new Node(3),new Node(4));
       cout<<"Lowest Common Ancestor of 4 and 3 is: "<<ans->data<<endl;
 
