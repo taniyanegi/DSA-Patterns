@@ -1,6 +1,9 @@
 
 // count leaf nodes in a binary tree
 
+#include<bits/stdc++.h>
+using namespace std;
+
 class Node {
 public:
     int data;
@@ -59,3 +62,4 @@ int countLeaves(Node* root) {
         cout<<"total leaves are "<<Total_Leaves<<endl;
         return 0;
     }
+
