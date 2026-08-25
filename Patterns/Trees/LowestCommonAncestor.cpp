@@ -30,12 +30,15 @@ Node* buildTree(vector<int>& preorder){
 
     return root;
 }
-Node* LowestCommonAncestor(Node* root, Node* p, Node* q) {
+
+// time complexity is O(n) and space complexity is O(h) where h is height of tree
+
+Node* LowestCommonAncestor(Node* root, int p, int q) {
            if(root==NULL){
             return NULL;
            }
 
-           if(root->data==p->data || root->data==q->data){
+           if(root->data==p || root->data==q){
             return root;
            }
 
@@ -60,7 +63,7 @@ int main(){
     Node* root=buildTree(preorder);
     
      
-      Node *ans=LowestCommonAncestor(root,new Node(3),new Node(4));
+      Node *ans=LowestCommonAncestor(root,3,4);
       cout<<"Lowest Common Ancestor of 4 and 3 is: "<<ans->data<<endl;
 
     return 0;
