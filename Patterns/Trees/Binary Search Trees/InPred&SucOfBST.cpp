@@ -64,6 +64,8 @@ Node* LeftMostInRightSubtree(Node* root){
          return ans;
 }
 
+// time complexity=O(h)
+// space complexity=O(1)
 vector<int> getPredSucc(Node* root,int key){
      Node* curr=root;
      Node* pred=NULL;
