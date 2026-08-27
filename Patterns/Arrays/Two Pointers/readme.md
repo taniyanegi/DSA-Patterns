@@ -76,14 +76,3 @@ Benefits:
 * Space Complexity: O(1)
 
 ---
-
----
-
-## Key Takeaways
-
-* Avoid unnecessary nested loops.
-* Works best on sorted arrays and strings.
-* Frequently asked in coding interviews.
-* Easy to combine with sorting and sliding window techniques.
-
----
